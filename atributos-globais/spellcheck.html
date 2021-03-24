@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATRIBUTO GLOBAL - SPELLCHECK</title>
+
+  <style>
+    #box-1 {
+      height: 200px;
+      width: 600px;
+      border-color: darkblue;
+      border: 8px;
+    }
+
+    #box-2 {
+      height: 200px;
+      width: 600px;
+      border-color: darkred;
+      border: 8px;
+    }
+
+    .paragrafo {
+      color: darkgreen;
+      font-size: 32px;
+    }
+
+    .paragrafo2 {
+      font-size: 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- QUANDO INCREMENTADO ESTE ATRIBUTO FAZ A VERIFICAÇÃO DE ORTO-
+  GRAFIA DO TEXTO QUE ESTA DENTRO DA MARCAÇÃO QUE ELE UTILIZOU-->
+
+  <H1>TEXTO COM CORREÇÃO</H1>
+
+  <div id="box-1">
+    <p class="paragrafo" spellcheck="true" contenteditable="true">
+      Lorem ipsum dolor sit amet consectetur, adipisicing
+      elit. Quis sapiente,
+      labore aut commodi molestiae enim magni
+      ipsum magnam alias dolor maiores optio fugit accusamus totam. Vitae magni quam excepturi at?</p>
+  </div>
+
+  <H1>TEXTO SEM CORREÇÃO</H1>
+
+  <div div id="box-2">
+    <p class="paragrafo2" spellcheck="false" contenteditable="true">Lorem ipsum dolor sit amet consectetur, adipisicing
+      elit. Quis
+      sapiente, labore aut commodi molestiae enim magni
+      ipsum magnam alias dolor maiores optio fugit accusamus totam. Vitae magni quam excepturi at?</p>
+  </div>
+
+</body>
+<!-- org. apagar comentario -->
+
+</html>

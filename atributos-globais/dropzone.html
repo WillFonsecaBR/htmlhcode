@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATRIBUTO GLOBAL - DROPZONE</title>
+
+  <style>
+    .caixa {
+      width: 100px;
+      height: 100px;
+      background-color: chocolate;
+      border: tomato 5px solid;
+    }
+
+    .drop {
+      width: 200px;
+      height: 200px;
+      border: darkblue 10px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="CX1" class="caixa" draggable="true">CAIXA 1</div>
+  <div id="CX2" class="caixa" draggable="true">CAIXA 2</div>
+
+  <div class="drop" dropzone="copy"></div>
+
+  <script>
+    const caixas = document.querySelectorAll(".caixa");
+    const dropZone = document.querySelector("[dropzone]");
+
+    caixas.forEach(caixaE1 => {
+
+      caixaE1.addEventListener('dragstart', e => {
+
+        e.dataTransfer.setData('text', e.target.id);
+
+        console.log(e.target.id);
+
+      });
+    });
+    dropZone.addEventListener('dragover', e => {
+      e.preventDefault();
+    })
+
+    dropZone.addEventListener('drop', e => {
+      console.log('drop!!!');
+    });
+
+
+  </script>
+
+</body>
+<!-- org. apagar comentario -->
+
+</html>
