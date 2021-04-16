@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TAG SCRIPT</title>
+  <script defer>
+    alert("javascript na head");
+    /*
+    # o correto é escrever o JS depois do codigo la no body
+    # para que o script seja carregado antes de iniciar a pagina devese
+      utilizar o atributo defer.
+    */
+  </script>
+</head>
+
+<body>
+  <h1>Teste tag script</h1>
+  <script>
+    /* 
+    o correto é que a tag script seja carregada depois que todo 
+    html for processado.
+    */
+    console.log(); (document.querySelectorAll("h1"));
+
+  </script>
+</body>
+
+</html>
